@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator - Elite Education</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Elite Education</div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="calculator.html">Fee Calculator</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <main class="calculator-page">
+        <section class="calculator-section fade-in">
+            <h1>Tuition Fee Calculator</h1>
+            <p>Estimate your course fees based on your program selection</p>
+            
+            <div class="calculator-container">
+                <form id="feeCalculator" class="calculator-form">
+                    <div class="form-group">
+                        <label for="program">Select Program:</label>
+                        <select id="program" required>
+                            <optgroup label="Engineering & Technology">
+                                <option value="computer_science">B.Tech Computer Science</option>
+                                <option value="mechanical">B.Tech Mechanical Engineering</option>
+                              
+                            </optgroup>
+                            
+                            <optgroup label="Business Studies">
+                                <option value="bba">Bachelor of Business Administration</option>
+                                <option value="finance">B.Com Finance</option>
+                              </optgroup>
+                            
+                            <optgroup label="Science & Mathematics">
+                                <option value="biology">BSc Biology</option>
+                                <option value="biotech">BSc Biotechnology</option>
+                            </optgroup>
+                            
+                            <optgroup label="Arts & Humanities">
+                                <option value="journalism">BA Journalism</option>
+                                <option value="history">BA History</option>
+                            </optgroup>
+                    
+                            <optgroup label="Medical & Health Sciences">
+                                <option value="nutrition">BSc Nutrition & Dietetics</option>
+                                <option value="medlab">BSc Medical Lab Technology</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Number of Semesters:</label>
+                        <input type="number" id="semester" min="1" max="8" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accommodation">Include Accommodation?</label>
+                        <input type="checkbox" id="accommodation">
+                    </div>
+
+                  
+
+                    <button type="submit" class="btn primary">Calculate Fees</button>
+                </form>
+
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Estimated Total Cost</h3>
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span>Tuition Fee:</span>
+                            <span id="tuitionCost">$0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Accommodation:</span>
+                            <span id="accommodationCost">$0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Meal Plan:</span>
+                            <span id="mealCost">$0</span>
+                        </div>
+                        <div class="cost-item total">
+                            <span>Total:</span>
+                            <span id="totalCost">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@eliteedu.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/calculator.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
